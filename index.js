@@ -12,7 +12,7 @@ const gravity = 0.7;
 
 
 
-const background1 = new Sprite({
+const background = new Sprite({
   position: {
     x: 0,
     y: -40,
@@ -21,17 +21,6 @@ const background1 = new Sprite({
   imageSrc: "./images/background/皇宫.png",
 });
 
-
-
-const shop = new Sprite({
-  position: {
-    x: 600,
-    y: 160,
-  },
-  imageSrc: "./images/shop.png",
-  scale: 2.5,
-  framesMax: 6,
-});
 
 const attack = {
   player: [10, 15],
@@ -212,7 +201,7 @@ function animate() {
 
   c.fillStyle = "black";
   c.fillRect(0, 0, canvas.width, canvas.height);
-  background1.update();
+  background.update();
   c.fillStyle = "rgba(255, 255, 255, 0.15)";
   c.fillRect(0, 0, canvas.width, canvas.height);
   player.update();
