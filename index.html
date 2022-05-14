@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fighting Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Press Start 2P', cursive;
+    }
+  </style>
+
+  <script src="jquery-1.12.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+  integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="./js/utils.js" defer></script>
+  <script src="./index.js" style="text-align:center; " defer></script>
+</head>
+
+<body>
+  <div id="test" style="margin:auto;text-align:center;" z-index=1999 position="relative" width="240px" height="800px">
+    <font size="6">Start!</font>
+    <!-- <img src="./images/start2.png" width="300" height="300"> -->
+  </div>
+  <script>
+  setTimeout(function(){document.getElementById("test").style.display="none";},2000);  
+  //1000是多久被隐藏，单位毫秒
+  </script>
+</body>
+
+<!-- <iframe
+  frameborder="no" 
+  marginwidth="0" 
+  marginheight="0" 
+  autoplay = True
+  width=298 
+  height=52 
+  src="//music.163.com/outchain/player?type=2&id=784575&auto=1&height=32">
+</iframe> -->
+
+
+<div class="intro">
+  <div class="container" style='border:#030303 3px solid;padding:5px;line-height:30px;'>
+      <h2 class="center">
+        <p align="center">Game Instructions</p> </h2>
+      <p class="code" align="center"> 
+        <!-- <span class="vue">从采用工具方面</span>可以分为3点 <br/>  -->
+        <span style='margin :5px';></span>P1: A Left, D Right, W Jump, G Light Strike, H Heavy Strike<br/>
+        <span style='margin :5px';></span>P2: ← left, → right, ↑ jump, K Light Strike, L Heavy Strike<br/>
+        <span style='margin :10px';></span>Refresh the page to start again
+        </p>
+    </div>
+    <span style='margin :100px';></span>
+</div>
+
+<body align-items="center" display = "grid" grid-template-rows = "auto" justify-items = "center" z-index=1>
+  <div style="position: relative; display: inline-block;">
+    <div style=" position: absolute; display: flex; width: 100%; align-items: center; padding: 20px; ">
+
+      <div style="border: 4px solid white; border-right: none; position: relative;width: 100%; display: flex; justify-content: flex-end;">
+        <div style="background-color: rgb(29, 36, 144); height: 35px; width: 100%;"></div>
+        <div style="position: absolute; background-color:  rgb(176, 10, 10); top: 0; right: 0; width: 100%; bottom: 0;" id="playerHealth"></div>
+      </div>
+
+      <div id="timer" style="border: 4px solid white; background-color: black; color: white; width: 150px; height: 60px; display: flex; align-items: center; justify-content: center;">
+        10
+      </div>
+
+      <div style="border: 4px solid white; border-left: none; position: relative; width: 100%; ">
+        <div style="background-color: rgb(29, 36, 144); height: 35px; "></div>
+        <div style="position: absolute; background-color: rgb(176, 10, 10); top: 0; right: 0; left: 0; bottom: 0;" id="enemyHealth"></div>
+      </div>
+    </div>
+    <div id="displayText" style="position: absolute; color: rgb(251, 251, 251); align-items: center; justify-content: center; top: 0; left: 0; right: 0; bottom: 0; display: none; font-size: xx-large;">
+      tie
+    </div>
+    <!-- <div align-items="center" display = "grid" grid-template-rows = "auto" justify-items = "center">
+      <canvas></canvas>
+    </div> -->
+    <!-- <div class="container">
+      <canvas id="scene" width="1200" height="600"></canvas>
+    </div> -->
+
+
+    <div class="container" margin="0 auto" width="66%" height="55%">
+      <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          </ul>
+      </div>
+      <canvas id="canvas"></canvas>
+  </div>
+
+  </div>
+</body>
+
+</html>
